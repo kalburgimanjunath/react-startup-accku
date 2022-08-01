@@ -1,11 +1,18 @@
-import React from "react";
-import "./style.css";
-
+import React from 'react';
+import './style.css';
+import { Routes, Route } from 'react-router';
+import { Registration, Login, Dashboard } from './pages/index';
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Routes>
+        <Route path="dashboard" element={<Dashboard />}></Route>
+        <Route path="registration" element={<Registration />}></Route>
+        <Route path="registration" element={<Registration />}></Route>
+        <Route path="registration" element={<Registration />}></Route>
+        <Route path="login" element={<Login />}></Route>
+        <Route path="/*" element={<Login />}></Route>
+      </Routes>
     </div>
   );
 }
